@@ -1,15 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>Pomodoro App by Popoy</h1>
+
+  <div>
+    <Timer title="Work Timer" :givenTime="(25 * 60)" cookieID="pomodoro-work" />
+  </div>
+
+  <hr>
+
+  <div>
+    <Timer title="Break Timer" :givenTime="(5 * 60)" cookieID="pomodoro-break" />
+  </div>
+
+  <hr>
+
+  <div>
+    <Timer title="Long Break Timer" :givenTime="(15 * 60)" cookieID="pomodoro-long-break" />
+  </div>
+
+  <p>Guide: Every 4 Pomodoros, take a longer 15-30 minute break</p>
+  
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Timer from '@/components/Timer.vue'
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Timer
   }
 }
 </script>
